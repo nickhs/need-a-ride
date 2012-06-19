@@ -4,7 +4,7 @@ $(function() {
         defaults: function() {
             return {
                 title: "not a person...",
-                order: Person.nextOrder(),
+                order: Ride.nextOrder(),
             };
         },
 
@@ -15,7 +15,7 @@ $(function() {
         },
 
         clear: function() {
-            this.destroy();
+            // this.destroy();
         }
     });
 
@@ -55,7 +55,7 @@ $(function() {
 
     var AppView = Backbone.View.extend({
 
-        el: $("#todoapp"),
+        el: $("#rideapp"),
 
         events: {
             "keypress #new-person": "createOnEnter"
