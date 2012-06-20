@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 from xss import crossdomain
 from flask.ext.sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test2.db'
@@ -56,4 +57,4 @@ def delete(name):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
