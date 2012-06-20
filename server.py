@@ -36,6 +36,16 @@ def index():
 
         return jsonify(ret)
 
+@app.route('/delete/<name>')
+@crossdomain(origin='*')
+def delete(name):
+    r = Rider.query.filter_by(name=name).first()
+    if r is not None:
+        db.session.delete(r)
+        db.session.commit()
+
+    return jsonify(result='success')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
