@@ -6,21 +6,23 @@ $(document).ready(function() {
         console.log(data)
         loadFromJson(data)
     });
+});
 
-    $(".person-destroy").live({
-        click: function() {
-            console.log($(this).prev().text())
-            var val = $(this).prev().text()
-            var cont = $(this)
+$(".person-destroy").live({
+    click: function() {
+        console.log($(this).prev().text())
+        var val = $(this).prev().text()
+        var cont = $(this)
 
-            $.ajax({
-                url: "http://localhost:5000/delete/"+val
-            }).done(function(data) {
-                console.log(data)
-                cont.parent().remove()
-            });
-        }
-    });
+        $.ajax({
+            url: "http://localhost:5000/delete/"+val
+        }).done(function(data) {
+            console.log(data);
+            cont.parent().remove();
+            var x = parseInt($(".number").text());
+            $(".number").text(x-1);
+        });
+    }
 });
 
 $("#new-person").keypress(function (e) {
@@ -35,7 +37,8 @@ $("#new-person").keypress(function (e) {
             console.log(data);
             $("#person-list").append(itemTemplate(val));
             $("#new-person").val("");
-            // FIXME add one to ride count
+            var x = parseInt($(".number").text());
+            $(".number").text(x+1);
         });
     }
 });
