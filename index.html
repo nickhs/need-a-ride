@@ -11,25 +11,30 @@
 
   <div id="rideapp">
     
-    <header>
+    <div class="title">
       <h1>Who's catching the shuttle?</h1>
-      <input id="new-person" type="text" placeholder="Need a ride?">
-    </header>
+    </div>
 
-    <section id="main">
-      <ul id="person-list"></ul>
-    </section>
+    <div class="content">
+      <div id="create-person">
+        <input id="new-person" placeholder="Name?" type="text">
+      </div>
+
+      <div id="people">
+        <ul id="person-list">
+        </ul>
+      </div>
+    </div>
+
+    <div id="ride-stats">
+      <span class="person-count">
+        <span class="number">0</span> People Riding
+      </span>
+    </div>
   </div>
 
-  <div id="instructions">
-    Use me!
-  </div>
-
-  <script src="http://backbonejs.org/test/vendor/json2.js"></script>
   <script src="http://backbonejs.org/test/vendor/jquery-1.7.1.js"></script>
-  <script src="http://backbonejs.org/test/vendor/underscore-1.3.1.js"></script>
-  <script src="http://backbonejs.org/backbone.js"></script>
-  <script src="index.js"></script>
+  <script src="ride.js"></script>
 
 </body>
 </html>
