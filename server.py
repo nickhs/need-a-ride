@@ -1,10 +1,11 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from xss import crossdomain
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test2.db'
 db = SQLAlchemy(app)
+
 
 class Rider(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -18,9 +19,15 @@ class Rider(db.Model):
             self.id: self.name
         }
 
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
 @app.route('/data', methods=['POST', 'GET'])
 @crossdomain(origin='*')
-def index():
+def data():
     if request.method == 'POST':
         name = request.form.keys()[0]
         r = Rider(name)
@@ -35,6 +42,7 @@ def index():
             ret.update(rider.serialize())
 
         return jsonify(ret)
+
 
 @app.route('/delete/<name>')
 @crossdomain(origin='*')
