@@ -169,7 +169,7 @@ body {
   cursor: pointer;
   width: 20px;
   height: 20px;
-  background: url(/templates/destroy.png) no-repeat center center;
+  background: url(/static/img/destroy.png) no-repeat center center;
 }
 /* line 106 */
 #rideapp .content ul#person-list li:hover .person-destroy {

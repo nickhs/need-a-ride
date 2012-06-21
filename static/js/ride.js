@@ -1,7 +1,7 @@
 $(document).ready(function() {
     console.log("document ready")
     $.ajax({
-        url: "http://localhost:5000/data"
+        url: "http://ride.nickhs.com/data"
     }).done(function(data) {
         console.log(data)
         loadFromJson(data)
@@ -15,7 +15,7 @@ $(".person-destroy").live({
         var cont = $(this)
 
         $.ajax({
-            url: "http://localhost:5000/delete/"+val
+            url: "http://ride.nickhs.com/delete/"+val
         }).done(function(data) {
             console.log(data);
             cont.parent().remove();
@@ -30,7 +30,7 @@ $("#new-person").keypress(function (e) {
         var val = $(this).val();
         console.log(val);
         var jqxhr = $.ajax({
-            url: "http://localhost:5000/data",
+            url: "http://ride.nickhs.com/data",
             type: "POST",
             data: val,
         }).done(function (data) {
