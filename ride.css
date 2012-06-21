@@ -159,55 +159,7 @@ body {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 64 */
-#rideapp .content ul#person-list li.editing {
-  padding: 0;
-  border-bottom: 0;
-}
-/* line 67 */
-#rideapp .content ul#person-list li.editing .person-input {
-  display: block;
-  width: 466px;
-  font-size: 24px;
-  font-family: inherit;
-  line-height: 1.4em;
-  border: 0;
-  outline: none;
-  padding: 6px;
-  border: 1px solid #999999;
-  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
-  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
-}
-/* line 79 */
-#rideapp .content ul#person-list li.editing .person-content {
-  display: none;
-}
-/* line 81 */
-#rideapp .content ul#person-list li.editing .person-check {
-  display: none;
-}
-/* line 83 */
-#rideapp .content ul#person-list li.editing .person-destroy {
-  display: none !important;
-}
-/* line 85 */
-#rideapp .content ul#person-list li .person-input {
-  display: none;
-}
-/* line 87 */
-#rideapp .content ul#person-list li .person-check {
-  position: relative;
-  top: 6px;
-  margin: 0 10px 0 7px;
-  float: left;
-}
-/* line 93 */
-#rideapp .content ul#person-list li.done .person-content {
-  text-decoration: line-through;
-  color: #777777;
-}
+
 /* line 96 */
 #rideapp .content ul#person-list li .person-destroy {
   position: absolute;
@@ -263,57 +215,6 @@ body {
   font-weight: bold;
   color: #555555;
 }
-/* line 123 */
-#rideapp #ride-stats .person-clear {
-  float: right;
-}
-/* line 125 */
-#rideapp #ride-stats .person-clear a {
-  display: block;
-  line-height: 20px;
-  text-decoration: none;
-  -moz-border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -o-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -khtml-border-radius: 12px;
-  border-radius: 12px;
-  background: rgba(0, 0, 0, 0.1);
-  color: #555555;
-  font-size: 11px;
-  margin-top: 8px;
-  padding: 0 10px 1px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
-  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
-}
-/* line 136 */
-#rideapp #ride-stats .person-clear a:hover {
-  background: rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
-  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
-}
-/* line 139 */
-#rideapp #ride-stats .person-clear a:active {
-  position: relative;
-  top: 1px;
-}
-
-/* line 144 */
-#instructions {
-  width: 520px;
-  margin: 10px auto;
-  color: #777777;
-  text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
-  text-align: center;
-}
-/* line 150 */
-#instructions li {
-  line-height: 2em;
-}
 
 /* line 153 */
 #credits {
@@ -323,8 +224,8 @@ body {
   text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
   text-align: center;
 }
+
 /* line 159 */
 #credits a {
   color: #888888;
 }
-
